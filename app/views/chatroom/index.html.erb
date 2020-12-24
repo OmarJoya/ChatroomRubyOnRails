@@ -1,2 +1,51 @@
-<h1>Chatroom#index</h1>
-<p>Find me in app/views/chatroom/index.html.erb</p>
+<h4 class="ui center aligned medium icon header">
+  <i class="circular blue comments icon"></i>
+  Chatroom
+</h4>
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui feed">
+          <h4 class="ui header">Messages</h4>
+          <% @messages && @messages.each do |message| %>
+            <div class="event">
+              <div class="content">
+                <div class="summary">
+                  <a><%= message.user.username %></a>: <%= message.body %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="extra content">
+        <form class="ui reply form">
+          <div class="field">
+            <div class="ui fluid icon input">
+              <input type="text" placeholder="Enter a message...">
+              <i class="bordered inverted blue icon edit"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="four wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui inverted vertical menu">
+          <a class="item">
+            Home
+          </a>
+          <a class="item">
+            Messages
+          </a>
+          <a class="item">
+            Friends
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
