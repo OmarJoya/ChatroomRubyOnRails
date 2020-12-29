@@ -14,7 +14,7 @@
       <div class="extra content">
         <%= form_for(@message, html: { class: "ui reply form", role: "form"} , url: message_path, remote: true) do |form|  %>
           <div class="field">
-            <div class="ui fluid icon input">
+            <div class="ui fluid icon input" id="message-input">
               <%= form.text_field :body %>
               <%= form.button '<i class="bordered inverted blue icon edit"></i>'.html_safe %>
             </div>

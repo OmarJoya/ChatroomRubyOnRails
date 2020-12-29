@@ -24,11 +24,21 @@ scroll_bottom = function () {
   }
 }
 
+submit_message = function () {
+  $('#message_body').on('keydown', function(e) {
+    if (e.key === 'Enter') {
+      $('button').trigger( "click" );
+      e.target.value = "";
+    }
+  })
+}
+
 $(document).on('turbolinks:load', function () {
   $('.ui.dropdown').dropdown();
 
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
+  submit_message();
   scroll_bottom();
 })
