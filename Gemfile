@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'semantic-ui-sass'
 
 # Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
@@ -55,7 +55,6 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'redis', '~> 4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
