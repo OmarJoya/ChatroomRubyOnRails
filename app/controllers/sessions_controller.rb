@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       flash[:success] = "Welcome"
       redirect_to root_path
-    else
-      flash.now[:error] = "Wrong login credentials"
-      render 'new'
-    end
+    #else
+     # flash.now[:error] = "Wrong login credentials"
+      #render 'new'
+    #end
   end
 
   def destroy
